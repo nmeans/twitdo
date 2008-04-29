@@ -3,6 +3,7 @@ ActionController::Routing::Routes.draw do |map|
     account.resources :todos
   end
 
+  map.account ':id', :controller => 'accounts', :action => 'show'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
