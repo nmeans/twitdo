@@ -1,5 +1,5 @@
 class AccountsController < ApplicationController
   def show
-    @todos = Account.from_param(params[:id]).todos
+    @account = Account.from_param(params[:id])
   end
 end

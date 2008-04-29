@@ -1,0 +1,11 @@
+.clear
+#user_avatar.grid_1
+  =image_tag @account.avatar_url, :alt=>"User Avatar"
+#user_info.grid_8
+  %h2= @account.username
+  needs to:
+.clear
+.grid_9.prefix_2
+  %ol
+    -@account.todos.each do |t|
+      %li= t.description
