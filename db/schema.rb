@@ -9,12 +9,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080429164533) do
+ActiveRecord::Schema.define(:version => 20080429172249) do
 
   create_table "accounts", :force => true do |t|
     t.string   "username",   :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "param"
+    t.string   "avatar_url"
   end
 
   create_table "todos", :force => true do |t|
