@@ -7,6 +7,8 @@ ActionController::Routing::Routes.draw do |map|
     info.home '/home', :action => 'index'
     info.about '/help/about', :action => 'about'
   end
+
+  map.index '/', :controller => 'todos', :action => 'index'
   
   map.account '/:id', :controller => 'accounts', :action => 'show'
 
