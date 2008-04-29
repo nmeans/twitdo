@@ -25,7 +25,9 @@ module Parser
     if account.new_record?
       # Handle new accounts here
     end
-    todo = Todo.new({ :tweet_id => st.id})
+    account.avatar_url = st.user.profile_image_url
+    account.save if account.avatar_url_changed?
+    todo = Todo.new({ :tweet_id => st.id, :tweet_time => st.created_at })
     todo.description = st.text.gsub("@need2","").strip
     account.todos << todo
   end
