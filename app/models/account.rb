@@ -4,4 +4,8 @@ class Account < ActiveRecord::Base
   def to_param
     "#{username}"
   end
+  
+  def twitter_link
+    "http://twitter.com/#{username}"
+  end
 end
