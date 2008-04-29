@@ -28,7 +28,7 @@ module Parser
     account.avatar_url = st.user.profile_image_url
     account.save if account.avatar_url_changed?
     todo = Todo.new({ :tweet_id => st.id, :tweet_time => st.created_at })
-    todo.description = st.text.gsub("@need2","").strip
+    todo.description = st.text.gsub(/@need2\s*:{0,1}/,"").strip
     account.todos << todo
   end
 end
