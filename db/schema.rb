@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20080429161028) do
+ActiveRecord::Schema.define(:version => 20080429164533) do
 
   create_table "accounts", :force => true do |t|
     t.string   "username",   :null => false
@@ -18,10 +18,11 @@ ActiveRecord::Schema.define(:version => 20080429161028) do
   end
 
   create_table "todos", :force => true do |t|
-    t.integer  "account_id",  :null => false
+    t.integer  "account_id"
     t.string   "description", :null => false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "tweet_id"
   end
 
 end
