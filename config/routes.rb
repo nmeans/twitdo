@@ -2,8 +2,14 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :accounts do |account|
     account.resources :todos
   end
+  
+  map.with_options :controller => 'info' do |info|
+    info.home '/home', :action => 'index'
+    info.about '/help/about', :action => 'about'
+  end
+  
+  map.account '/:id', :controller => 'accounts', :action => 'show'
 
-  map.account ':id', :controller => 'accounts', :action => 'show'
   # The priority is based upon order of creation: first created -> highest priority.
 
   # Sample of regular route:
