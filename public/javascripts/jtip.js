@@ -35,7 +35,7 @@ function JT_show(url,linkId,title){
 		var clickElementx = getAbsoluteLeft(linkId) + arrowOffset; //set x position
 	}else{
 		$("body").append("<div id='JT' style='width:"+params['width']*1+"px'><div id='JT_arrow_right' style='left:"+((params['width']*1)+1)+"px'></div><div id='JT_close_right'>"+title+"</div><div id='JT_copy'><div class='JT_loader'><div></div></div>");//left side
-		var clickElementx = getAbsoluteLeft(linkId) - ((params['width']*1) + 15); //set x position
+		var clickElementx = getAbsoluteLeft(linkId) - ((params['width']*1) + 10); //set x position
 	}
 	
 	$('#JT').css({left: clickElementx+"px", top: clickElementy+"px"});
