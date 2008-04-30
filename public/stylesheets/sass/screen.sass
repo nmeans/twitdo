@@ -1,0 +1,184 @@
+body
+  :background-color #36F
+#header
+  :position fixed
+  :margin-left 70px
+  :height 125px
+  :width 780px
+  :padding-left 20px
+  :padding-right 20px
+  :background url(../images/header_bg.png) top left repeat-x
+  h1 img
+    :margin-top 52px
+    :margin-left 38px
+    :margin-bottom 0px
+#navigation
+  :text-align right
+  :font-family "Trebuchet MS", "Helvetica", "sans-serif"
+  :margin-top 82px
+  :height 25px
+  ul
+    :list-style-type none
+    li
+      :display inline
+      :margin 0px
+      a
+        :padding-left 9px
+        :padding-right 11px
+        :border-right 1px solid #333
+        &:link,&:visited
+          :color #000
+          :text-decoration none
+        &:hover,&:active
+          :text-decoration underline
+        &.last
+          :border-right none
+          :padding-right 0px !important
+          :font-weight bold
+#content
+  :background url(../images/content_bg.png) top left repeat-y
+  :width 780px
+  :padding-left 20px
+  :padding-right 20px
+  :margin-left 70px
+  :margin-top -1px
+  :padding-top 125px
+#footer
+  :width 780px
+  :padding-left 20px
+  :padding-right 20px
+  :margin-left 70px
+  :background-color #3162F6
+  :text-align right
+  :color #333
+  :margin-bottom 30px
+  a
+    :color #333
+    :text-decoration underline
+a
+  :color #333
+  :text-decoration none
+  &:hover,&:active
+    :text-decoration underline
+  &:visited
+    :color #333
+#user_avatar
+  img
+    :border 4px solid #333
+    :width 48px
+    :height 48px
+  :padding-top 17px
+#user_info
+  :padding-top 45px
+  h2
+    :display inline
+    :padding-left 5px
+    :padding-right 2px
+    :font-family "Trebuchet MS", "Helvetica", "sans-serif"
+    a
+      :text-decoration none
+      :color #444
+      &:hover
+        :color #000
+        :text-decoration underline
+#front_page_container
+  :padding-top 20px
+.todo_item
+  :margin-bottom 20px
+  :padding 0px
+  img
+    :border 4px solid #333
+    :margin-top 9px
+  h2
+    :font-size 200%
+    :line-height 0.9
+    :display inline
+    :font-family "Trebuchet MS", "Helvetica", "sans-serif"
+    :padding-right 2px
+    a
+      :text-decoration none
+      :color #444
+      &:hover
+        :color #000
+        :text-decoration underline
+  .todo_contents
+    :font-weight bold
+    :margin-left 5px 
+    :padding-left 8px
+    :border-left 2px solid #999
+    
+  .todo_timeframe
+    :line-height 2
+#profile_container
+  ol
+    :font-weight bold
+    :margin-top -2px
+  li span.todo_item
+    :font-weight normal
+  #user_info
+    :margin-top -13px
+    :margin-bottom -12px
+    
+#JT_arrow_left
+  :background-image url(../images/arrow_left.gif)
+  :background-repeat no-repeat
+  :background-position left top
+  :position absolute
+  :z-index 101
+  :left -12px
+  :height 23px
+  :width 10px
+  :top -3px
+
+#JT_arrow_right
+  :background-image url(../images/arrow_right.gif)
+  :background-repeat no-repeat
+  :background-position left top
+  :position absolute
+  :z-index 101
+  :height 23px
+  :width 11px
+  :top -2px
+
+#JT 
+  :position absolute
+  :z-index 100
+  :border 2px solid #CCCCCC
+  :background-color #fff
+
+#JT_copy
+  :padding 10px 10px 10px 10px
+  :color #333333
+
+.JT_loader
+  :background-image url(../images/loader.gif)
+  :background-repeat no-repeat
+  :background-position center center
+  :width 100%
+  :height 12px
+
+#JT_close_left
+  :background-color #CCCCCC
+  :text-align left
+  :padding-left 8px
+  :padding-bottom 5px
+  :padding-top 2px
+  :font-weight bold
+
+#JT_close_right
+  :background-color #CCCCCC
+  :text-align left
+  :padding-left 8px
+  :padding-bottom 5px
+  :padding-top 2px
+  :font-weight bold
+
+#JT_copy p
+  :margin 3px 0
+
+#JT_copy img
+  :padding 1px
+  :border 1px solid #CCCCCC
+
+.jTip
+  :cursor help

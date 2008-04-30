@@ -4,8 +4,9 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.with_options :controller => 'info' do |info|
-    info.home '/home', :action => 'index'
+    info.home '/', :controller => 'todos', :action => 'index'
     info.about '/help/about', :action => 'about'
+    info.get_started '/help/get_started', :action => 'get_started'
   end
 
   map.index '/', :controller => 'todos', :action => 'index'

@@ -1,3 +1,16 @@
-%ol
+#front_page_container
   - @todos.each do |todo|
-    %li= todo.description
+    %div{:class => "todo_item grid_12", :id => "todo_#{todo.tweet_id}"}
+      .todo_image.grid_1.alpha
+        =image_tag todo.account.avatar_url, :alt => "#{todo.account.username}'s Avatar"
+      .todo_content.grid_8
+        %h2= link_to todo.account.username, todo.account.twitter_profile_url
+        needs to:
+        .todo_contents
+          = todo.description
+        .todo_timeframe 
+          as of
+          =time_ago_in_words(todo.tweet_time)
+          ago.
+          ="[" + link_to("#{todo.account.username}'s full list", todo.account.full_list_url) + "]"
+.clear

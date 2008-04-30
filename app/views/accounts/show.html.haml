@@ -1,0 +1,16 @@
+#profile_container
+  #user_avatar.grid_1
+    =image_tag @account.avatar_url, :alt=>"User Avatar"
+  #user_info.grid_8
+    %h2= link_to @account.username, @account.twitter_profile_url
+    needs to:
+  .clear
+  .grid_8.prefix_1
+    %ol
+      -@account.todos.each do |t|
+        %li
+          %span.todo_item
+            = t.description
+            %span{:class => "todo_meta"}
+              ="(" + time_ago_in_words(t.tweet_time) + " ago)"
+.clear
