@@ -12,4 +12,5 @@
           as of
           =time_ago_in_words(todo.tweet_time)
           ago.
+          ="[" + link_to("#{todo.account.username}'s full list", todo.account.full_list_url) + "]"
 .clear

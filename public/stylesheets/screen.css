@@ -47,6 +47,18 @@ body {
   margin-top: -1px;
   padding-top: 125px; }
 
+#footer {
+  width: 780px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: 70px;
+  background-color: #3162F6;
+  text-align: right;
+  color: #333;
+  margin-bottom: 30px; }
+  #footer a {
+    color: #333; }
+
 #user_avatar {
   padding-top: 17px; }
   #user_avatar img {
@@ -59,10 +71,17 @@ body {
   #user_info h2 {
     display: inline;
     padding-left: 5px;
+    padding-right: 2px;
     font-family: "Trebuchet MS", "Helvetica", "sans-serif"; }
+    #user_info h2 a {
+      text-decoration: none;
+      color: #444; }
+      #user_info h2 a:hover {
+        color: #000;
+        text-decoration: underline; }
 
 #front_page_container {
-  padding-top: 25px; }
+  padding-top: 20px; }
 
 .todo_item {
   margin-bottom: 20px;
@@ -89,6 +108,15 @@ body {
     border-left: 2px solid #999; }
   .todo_item .todo_timeframe {
     line-height: 2; }
+
+#profile_container ol {
+  font-weight: bold;
+  margin-top: -2px; }
+#profile_container li span.todo_item {
+  font-weight: normal; }
+#profile_container #user_info {
+  margin-top: -13px;
+  margin-bottom: -12px; }
 
 #JT_arrow_left {
   background-image: url(../images/arrow_left.gif);

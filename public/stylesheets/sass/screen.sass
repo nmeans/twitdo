@@ -43,6 +43,17 @@ body
   :margin-left 70px
   :margin-top -1px
   :padding-top 125px
+#footer
+  :width 780px
+  :padding-left 20px
+  :padding-right 20px
+  :margin-left 70px
+  :background-color #3162F6
+  :text-align right
+  :color #333
+  :margin-bottom 30px
+  a
+    :color #333
 #user_avatar
   img
     :border 4px solid #333
@@ -54,9 +65,16 @@ body
   h2
     :display inline
     :padding-left 5px
+    :padding-right 2px
     :font-family "Trebuchet MS", "Helvetica", "sans-serif"
+    a
+      :text-decoration none
+      :color #444
+      &:hover
+        :color #000
+        :text-decoration underline
 #front_page_container
-  :padding-top 25px
+  :padding-top 20px
 .todo_item
   :margin-bottom 20px
   :padding 0px
@@ -83,6 +101,15 @@ body
     
   .todo_timeframe
     :line-height 2
+#profile_container
+  ol
+    :font-weight bold
+    :margin-top -2px
+  li span.todo_item
+    :font-weight normal
+  #user_info
+    :margin-top -13px
+    :margin-bottom -12px
     
 #JT_arrow_left
   :background-image url(../images/arrow_left.gif)

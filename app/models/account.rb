@@ -5,6 +5,14 @@ class Account < ActiveRecord::Base
     "#{username}"
   end
   
+  def full_list_url
+    if RAILS_ENV == 'production'
+      return "http://twitdo.com/#{username}"
+    else
+      return "http://localhost:3000/#{username}"
+    end
+  end
+  
   def twitter_profile_url
     "http://twitter.com/#{username}"
   end

@@ -8,11 +8,18 @@
     #header
       %h1.grid_5.alpha
         = image_tag('twitdo_logo.gif', :alt => "TwitDo")
-      #navigation.grid_5.omega
+      #navigation.grid_4.suffix_1.omega
         %ul
-          %li= link_to "master list", home_url
+          %li= link_to "home", home_url
           %li= link_to "people", "people"
           %li= link_to "about/faq", about_url
           %li= link_to "get started!", get_started_url, {:class => "last jTip", :id => "get_started", :name => "Getting Started"}
     #content
       = yield
+    #footer
+      .grid_9.suffix_1
+        = copyright_string + " - A "
+        %a{:href=>"http://heliumsyndicate.com/"} Helium Syndicate
+        conspiracy.
+      .clear
+      
