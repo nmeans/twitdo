@@ -7,7 +7,7 @@ class Account < ActiveRecord::Base
   
   def full_list_url
     if RAILS_ENV == 'production'
-      return "http://twitdo.com/#{username}"
+      return "http://twittodo.com/#{username}"
     else
       return "http://localhost:3000/#{username}"
     end

@@ -2,7 +2,10 @@
 %head
   = javascript_include_tag :defaults, "jtip.js"
   = stylesheet_link_tag "reset.css","screen.css","text.css","960.css"
-  %title TwitDo
+  %title 
+    TwitToDo
+    = @title.nil? ? " :: Manage Your To Do List Twitter-style!" : " :: #{h(@title)}"
+    
 %body
   .container_12
     #header
@@ -11,15 +14,21 @@
       #navigation.grid_4.suffix_1.omega
         %ul
           %li= link_to "home", home_url
-          %li= link_to "people", "people"
+          /%li= link_to "people", "people"
           %li= link_to "about/faq", about_url
           %li= link_to "get started!", get_started_url, {:class => "last jTip", :id => "get_started", :name => "Getting Started"}
     #content
       = yield
     #footer
-      .grid_9.suffix_1
-        = copyright_string + " - A "
-        %a{:href=>"http://heliumsyndicate.com/"} Helium Syndicate
+      .grid_10
+        = copyright_string + " &mdash; A"
+        %a{:href=>"http://heliumsyndicate.com/", :style => "font-weight: bold;"}
+          %img{:src=>"/images/hs_bullet.gif", :alt => "Helium Syndicate logo",:style => "padding-right: 2px;"}Helium Syndicate
         conspiracy.
+        All rights reserved.  
+        %br
+        TwitToDo & Helium Syndicate are not affilliated with
+        %a{:href=>"http://twitter.com/"} Twitter
+        in any way.
       .clear
       
