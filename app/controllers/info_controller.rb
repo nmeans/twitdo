@@ -14,4 +14,9 @@ class InfoController < ApplicationController
       render
     end
   end
+  
+  def update 
+    Parser::parse_replies
+    render :text => "", :layout => false
+  end
 end

@@ -10,7 +10,9 @@ ActionController::Routing::Routes.draw do |map|
   end
 
   map.index '/', :controller => 'todos', :action => 'index'
-  
+
+  map.connect '/help/parser', :controller => 'info', :action => 'update'
+
   map.account '/:id', :controller => 'accounts', :action => 'show'
 
 end
