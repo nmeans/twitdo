@@ -1,0 +1,18 @@
+#not_found_container.grid_8.prefix_1
+  %h2= "Can't Find List for \"#{h @id}\""
+  %strong Looks like we don't have any to-dos for you just yet.  Here's what you do:
+  %ol
+    %li
+      Send a tweet to <strong>@need2</strong> (using Twitter, of course).
+    %li 
+      ="Visit <strong><a href=\"http://twittodo.com/#{h @id}\">http://twittodo.com/#{h @id}</a></strong>, and voilà!"
+  %strong You say you just sent someting to @need2?
+  %ol
+    %li Wait just a bit.  Twitter only lets us fetch new to-dos every few minutes, so your note may show up momentarily.
+    %li 
+      Still nothing?  Send us an email with your Twitter username to
+      = "#{mail_to('help@twittodo.com')}."
+      We'll look into it and get back to you as soon as we can!
+      
+  
+.clear

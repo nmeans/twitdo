@@ -3,6 +3,8 @@ ActionController::Routing::Routes.draw do |map|
     account.resources :todos
   end
   
+  map.my_list '/account/my_list', :controller => 'accounts', :action => 'my_list'
+  
   map.with_options :controller => 'info' do |info|
     info.home '/', :controller => 'todos', :action => 'index'
     info.about '/help/about', :action => 'about'
@@ -12,5 +14,4 @@ ActionController::Routing::Routes.draw do |map|
   map.index '/', :controller => 'todos', :action => 'index'
   
   map.account '/:id', :controller => 'accounts', :action => 'show'
-
 end

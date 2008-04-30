@@ -4,7 +4,7 @@
   = stylesheet_link_tag "reset.css","screen.css","text.css","960.css"
   %title 
     TwitToDo
-    = @title.nil? ? " :: Manage Your To Do List Twitter-style!" : " :: #{h(@title)}"
+    = @title.nil? ? " :: Manage Your To-Do List Twitter-style!" : " :: #{h(@title)}"
     
 %body
   .container_12
@@ -14,6 +14,7 @@
       #navigation.grid_4.suffix_1.omega
         %ul
           %li= link_to "home", home_url
+          %li= link_to "my list", my_list_url
           /%li= link_to "people", "people"
           %li= link_to "about/faq", about_url
           %li= link_to "get started!", get_started_url, {:class => "last jTip", :id => "get_started", :name => "Getting Started"}
