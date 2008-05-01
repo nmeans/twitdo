@@ -19,3 +19,4 @@ production:
   user: twitdo-user
   password: lkjw#23oiyw!
   host: localhost
+  socket: /var/run/mysqld/mysqld.sock
