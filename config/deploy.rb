@@ -23,7 +23,7 @@ namespace :deploy do
     [ :stop, :start, :restart ].each do |t|
       desc "#{t.to_s.capitalize} the thin cluster"
       task t, :roles => :app do
-        invoke_command "thin #{t.do_s} -C #{thin_conf}", :via => :sudo
+        invoke_command "thin #{t.to_s} -C #{thin_conf}", :via => :sudo
       end
     end
   end
