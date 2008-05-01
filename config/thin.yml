@@ -1,0 +1,12 @@
+--- 
+pid: /var/www/apps/twitdo/shared/pids/thin.pid
+socket: /tmp/thin.sock
+log: /var/www/apps/twitdo/shared/log/thin.log
+max_conns: 1024
+timeout: 30
+adapter: rails
+chdir: /var/www/apps/twitdo/current
+environment: production
+max_persistent_conns: 512
+daemonize: true
+servers: 2
