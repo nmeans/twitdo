@@ -16,7 +16,7 @@ test:
 production:
   adapter: mysql
   database: twitdo_prod
-  user: twitdo-user
+  username: twitdo-user
   password: lkjw#23oiyw!
   host: localhost
   socket: /var/run/mysqld/mysqld.sock
